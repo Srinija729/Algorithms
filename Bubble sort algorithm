@@ -1,0 +1,26 @@
+def bubble_Sort_1(arr, order):
+    for j in range(len(arr)):
+        for i in range((len(arr)-1)):
+            if order == "asc":
+                if arr[i] > arr[i+1]:
+                    a = arr[i]
+                    arr.remove(a)
+                    arr.insert(i+1, a)
+            elif order == "desc":
+                if arr[i] < arr[i+1]:
+                    a = arr[i]
+                    arr.remove(a)
+                    arr.insert(i+1, a)
+    return arr
+
+
+def main():
+    int_list = [90, 9, 2, 99, 50, 72, 3, 66, 74]
+    order = "desc"
+    print(bubble_Sort_1(int_list, order))
+
+
+if __name__ == '__main__':
+    main()
+
+
